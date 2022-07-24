@@ -1,0 +1,2 @@
+GET localhost:8000/nacos/getById?serviceId=demo-admin1
+Accept: application/json

@@ -56,8 +56,10 @@ public class ResultVoAdvice implements ResponseBodyAdvice<Object> {
         resultVo.setMessage(HttpCode.SUCCESS.getValue());
         resultVo.setSuccess(true);
 
-        if (Assert.isEmpty(o) || o instanceof ResultVo) {
+        if (o == null || o instanceof ResultVo) {
+
             resultVo = (ResultVo<Object>) o;
+
         } else {
             resultVo.setData(o);
         }
